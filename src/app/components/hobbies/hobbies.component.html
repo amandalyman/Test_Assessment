@@ -1,0 +1,86 @@
+<div class="bg-white p-6 gap-6 font-serif flex flex-row">
+  <div class="flex flex-col justify-between w-1/2 gap-6">
+    <!-- SEWING -->
+    <custom-card [ngClass]="highlightedCard == 'sewing' ? 'highlighted-card' : ''">
+      <p card-title>SEWING</p>
+      <mat-icon card-icon fontIcon="checkroom" class="card-icon"></mat-icon>
+      <p card-content>
+        There are so many techniques and skills in sewing. Every project I start
+        will always end in a lesson learned. I have yet to accomplish something
+        attrively wearable but it hasn't stopped me yet.
+      </p>
+    </custom-card>
+    <!-- BAKING -->
+    <custom-card>
+      <p card-title>BAKING</p>
+      <mat-icon card-icon fontIcon="cookie" class="card-icon"></mat-icon>
+      <p card-content>
+        If calories weren't a thing, I'd be baking all day, everyday to perfect
+        the most delicious desserts. I will always have my cake and eat it too.
+      </p>
+    </custom-card>
+    <!-- CARPENTRY -->
+    <custom-card [ngClass]="highlightedCard == 'carpentry' ? 'highlighted-card' : ''">
+      <p card-title>CARPENTRY</p>
+      <mat-icon card-icon fontIcon="carpenter" class="card-icon"></mat-icon>
+      <p card-content>
+        I can get overly ambitious when an idea comes to mind. The desk I have
+        used everyday since it came into fruition was the most ambitious project
+        I have ever achieved. I had never made furniture nor welded before that,
+        but why not attempt both in my first ever carpentry project? It's been 4
+        years and my desk is still holding strong!
+      </p>
+      <img
+        card-image
+        src="../../../assets/images/desk-2.jpg"
+        alt="Desk"
+        class="card-rounded-img !w-[200px]"
+      />
+    </custom-card>
+  </div>
+  <div class="flex flex-col justify-between w-1/2 gap-6">
+    <!-- 3D -->
+    <custom-card [ngClass]="highlightedCard == '3d' ? 'highlighted-card' : ''">
+      <p card-title>CNC + 3D PRINT</p>
+      <mat-icon card-icon fontIcon="view_in_ar" class="card-icon"></mat-icon>
+      <p card-content>
+        Although I am new to the 3D world, I dove right in to 3D-modeling and
+        made Save The Date magnets for my wedding guests. This has been by far
+        the most challenging to pick up but it's a pretty cool feeling to say,
+        "I made that!" when I finally got a prototype to print. I'm still at the
+        beginning stages, so the more complex shapes like the AT-AT in the
+        picture below is no credit to me. I just wanted to appreciate their
+        efforts to the fullest!
+      </p>
+      <img
+        card-image
+        src="../../../assets/images/ATAT.jpg"
+        alt="ATAT"
+        class="card-rounded-img inline pr-2"
+      />
+      <img
+        card-image
+        src="../../../assets/images/CNC.jpg"
+        alt="ATAT"
+        class="card-rounded-img inline"
+      />
+    </custom-card>
+    <!-- CRICUT -->
+    <custom-card>
+      <p card-title>CRICUT CUTTING</p>
+      <mat-icon card-icon fontIcon="print" class="card-icon"></mat-icon>
+      <p card-content>
+        Cricut creations are a recent discovery that came about at the same time
+        as the CNC creations. Learning how to use the Maker 3 was quick and
+        intuitive. This lead to immediate brainstorming about the endless
+        possibilities I could create. As I started producing mock-ups, there
+        were a bit of hurdles to overcome when producing clean and crisp prints.
+        I managed to face those challenges as they were just mere obstacles, but
+        it did not stop me from making what I envisioned. I'm confident that if
+        all goes well with this application process, those obstacles will become
+        inexistent and creators will be able to flourish their creations beyond
+        imagined!
+      </p>
+    </custom-card>
+  </div>
+</div>

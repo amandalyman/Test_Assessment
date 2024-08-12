@@ -1,0 +1,37 @@
+.h-fill-avail {
+  height: -webkit-fill-available;
+  height: -moz-fill-available;
+  height: stretch;
+}
+
+.dialog-modal {
+  border-radius: 20px;
+}
+
+.dialog-modal div {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+  }
+  /* Background track */
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+}
+
+.resumeHeader4 {
+  color: #2079c7;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+.redirectButton {
+  color: #2079c7;
+  font-weight: 600;
+}

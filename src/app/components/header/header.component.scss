@@ -1,0 +1,18 @@
+.router-link {
+  padding-top: 16px;
+}
+
+.router-link:not(.active-link):hover,
+.active-link {
+  background-color: #fde68a;
+  border-radius: 0 0 20px 20px;
+  padding-top: 24px;
+  padding-bottom: 4px;
+  transform-origin: bottom center;
+  transition: color ease-out 0.2s, background ease-out 0.2s,
+    padding ease-out 0.4s;
+}
+
+.router-link button {
+  padding: 0 12px;
+}

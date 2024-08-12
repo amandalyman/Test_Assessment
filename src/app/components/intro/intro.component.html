@@ -1,0 +1,62 @@
+<div class="flex flex-row justify-around items-center absolute h-fill-avail">
+  <!-- Me -->
+  <div class="w-1/2 flex justify-center">
+    <img
+      src="../../../assets/images/amanda-yellow-dress.jpg"
+      alt="Amanda"
+      class="card-rounded-img !h-[40vw] !w-[40vw]"
+    />
+  </div>
+  <!-- Intro -->
+  <div class="w-1/2">
+    <header
+      class="w-[200%] ml-[-100%] pl-[100%] relative z-[-1] italic font-extrabold font-serif tracking-widest uppercase text-4xl pl-3 py-8 bg-gradient-to-l from-white to-amber-200"
+    >
+      Hello... it's me
+    </header>
+    <div class="intro-info leading-6 pt-3 pr-10">
+      <p class="text-black text-lg uppercase pb-3">
+        Programmer by day, crafter by night
+      </p>
+      <p class="text-slate-600 text-md pb-3">
+        I am one to constantly challenge myself with new craft projects. I have
+        dabbled in many things from
+        <button class="redirectButton" (click)="redirectTimer('sewing')">
+          sewing
+        </button>
+        to
+        <button class="redirectButton" (click)="redirectTimer('carpentry')">
+          carpentry
+        </button>
+        to
+        <button class="redirectButton" (click)="redirectTimer('3d')">
+          3D modeling and CNC-ing</button
+        >.
+      </p>
+      <p class="text-slate-600 text-md pb-3">
+        See my
+        <button (click)="openModal()" class="redirectButton">resume</button> for
+        the projects I have tackled as a daily programmer.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Redirect Warning -->
+<div *ngIf="isWarningOpen" class="fixed bottom-6 right-6">
+  <mat-card class="flex flex-row w-fit p-2">
+    <mat-card-content class="!flex items-center !py-0"
+      ><p>{{ timerMessage }}</p>
+    </mat-card-content>
+    <mat-card-actions class="!min-h-[unset] rounded-md !p-[unset]"
+      ><button
+        mat-button
+        #cancelButton
+        (click)="stopCountdown()"
+        type="button"
+        class="!bg-[#2079c7] !text-white h-full w-full"
+      >
+        CANCEL
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

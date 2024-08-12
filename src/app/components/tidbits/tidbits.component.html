@@ -1,0 +1,85 @@
+<div class="bg-white p-6 gap-6 font-serif flex flex-row">
+  <div class="flex flex-col justify-between w-1/2 gap-6">
+    <!-- PETS -->
+    <custom-card>
+      <p card-title>PETS</p>
+      <mat-icon card-icon fontIcon="pets" class="card-icon"></mat-icon>
+      <p card-content>
+        My fiancé and I have two dogs - Sir Lancelot and King Arthur. It is
+        amazing how much of their personalities reflect us! Lance is laid back
+        but has his moments of energy. Meanwhile, Arthur is super active and
+        lives to annoy his brother.
+      </p>
+      <img
+        card-image
+        src="../../../assets/images/dogs.jpg"
+        alt="Dogs"
+        class="card-rounded-img"
+      />
+    </custom-card>
+    <!-- BIRTHDAY -->
+    <custom-card>
+      <p card-title>B-DAY</p>
+      <mat-icon card-icon fontIcon="cake" class="card-icon"></mat-icon>
+      <p card-content>
+        Being {{ birthdayInDays }} days old surely doesn't feel like it.<br /><br />Let's
+        see how old you are in days:<br />
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            [(ngModel)]="guestBirthday"
+          />
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </p>
+
+      <div card-date-response class="h-6">
+        <p *ngIf="guestBirthday" [@enterAnimation]>
+          Your age: {{ convertDateToDays(guestBirthday) }} days old
+        </p>
+      </div>
+    </custom-card>
+  </div>
+  <div class="flex flex-col justify-between w-1/2 gap-6">
+    <!-- MARRIAGE -->
+    <custom-card>
+      <p card-title>LIFE EVENTS</p>
+      <mat-icon card-icon fontIcon="favorite" class="card-icon"></mat-icon>
+      <p card-content>
+        In early December, I will be getting married! We're excited to tie the
+        knot, but equally excited to be honeymooning in Japan! We'll be
+        exploring a handful of cities and immersing ourselves in Japanese
+        culture. Plus, we can't wait to indulge in all the delicious food!
+      </p>
+    </custom-card>
+    <!-- VACATION -->
+    <custom-card>
+      <p card-title>TRAVEL</p>
+      <mat-icon
+        card-icon
+        fontIcon="connecting_airports"
+        class="card-icon"
+      ></mat-icon>
+      <p card-content>
+        Lately, I have been enjoying traveling the U.S.. I went to Yellowstone
+        and Grand Teton for the first time last summer. Now, I am determined to
+        visit most, if not all, U.S. National Parks in my lifetime.<br />On the
+        off-season in winter, a large group of us go skiing/snowboarding for 3
+        days to whichever mountain tickles our fancy. But at the end of this
+        year during our honeymoon, we will be shredding down the mountains of
+        Hokkaido!
+      </p>
+      <img
+        card-image
+        src="../../../assets/images/yellowstone.jpg"
+        alt="Yellowstone"
+        class="card-rounded-img"
+      />
+    </custom-card>
+  </div>
+</div>
